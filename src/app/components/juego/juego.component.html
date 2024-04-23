@@ -1,0 +1,24 @@
+<main class="h-screen w-screen flex flex-col items-center justify-evenly p-0">
+    <div class="head w-screen h-1/4 flex justify-start">
+        <img class="h-11" src="./assets/menu.png" alt="">
+        <h2>Categoria</h2>
+        <div class="progress-bar">
+
+        </div>
+       
+    </div>
+    <!-- Seccion palabra -->
+    <div class="">
+        @for (item of palabra; track $index) {
+            <div>{{item}}</div>
+        }
+    </div>
+    <!-- Seccion letras -->
+    <div class="flex">
+        @for (letra of letras; track $index) {
+            <div>{{letra}}</div>
+        }
+    </div>
+
+    
+</main>

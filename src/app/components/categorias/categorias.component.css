@@ -1,0 +1,34 @@
+*{
+    font-family: "Mouse Memoirs", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(25,9,77);
+    background: linear-gradient(180deg, rgba(25,9,77,1) 0%, rgba(41,23,122,1) 56%);
+}
+
+.boton{
+    background-color: #2562FF;
+    height: 10%;
+    width: 65%;
+    font-size: 32px;
+}
+.titulo{
+    /* border: 4px solid #1E283B; */
+    background-image: linear-gradient(to bottom, #82BBFE, #ECF7FF);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 50px;
+    /* position: absolute; */
+    /* top: 14%; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #1E283B;
+}
+
+.boton-back{
+    width: -webkit-fill-available;
+}
