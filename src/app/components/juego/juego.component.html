@@ -1,24 +1,40 @@
-<main class="h-screen w-screen flex flex-col items-center justify-evenly p-0">
-    <div class="head w-screen h-1/4 flex justify-start">
-        <img class="h-11" src="./assets/menu.png" alt="">
-        <h2>Categoria</h2>
-        <div class="progress-bar">
+<main class="h-screen w-screen pt-9 px-3 pb-2">
+    <div class="header flex justify-evenly items-start">
+        <div class="algo flex justify-evenly ">
+            <img class="h-11 -ml-3" src="./assets/menu.png" alt="">
+            <h2 class="w-1/2 text-white text-4xl ml-4">Paises</h2>
+
+        </div>
+
+        <div class="h-1/4 w-1/4 flex justify-evenly items-center -mr-12 ">
+
+            <h2 class="text-white text-3xl text-end">5</h2>
+            <!-- <div class="progress-bar">
+            </div> -->
+            <img src="./assets/corazon.png" alt="corazon" class="h-7 w-7">
 
         </div>
        
     </div>
+
+    <div class="h-5/6 flex flex-col justify-around items-stretch mt-14">
+        <div class="h-1/4 flex items-center justify-evenly">
+            @for (item of palabra; track $index) {
+                <button class="text-white text-3xl boton-palabra m-2">
+                    {{item}}
+                </button>
+            }
+        </div>
+        <!-- Seccion letras -->
+        <div class="flex flex-wrap justify-center">
+            @for (letra of letras; track $index) {
+                <button class="letra mx-1 my-3 text-3xl">{{letra}}</button>
+            }
+        </div>
+
+    </div>
     <!-- Seccion palabra -->
-    <div class="">
-        @for (item of palabra; track $index) {
-            <div>{{item}}</div>
-        }
-    </div>
-    <!-- Seccion letras -->
-    <div class="flex">
-        @for (letra of letras; track $index) {
-            <div>{{letra}}</div>
-        }
-    </div>
+    
 
     
 </main>

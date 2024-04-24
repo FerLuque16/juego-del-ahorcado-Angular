@@ -18,7 +18,8 @@ export class JuegoComponent {
     animales: ["Perro", "Gato", "León", "Elefante", "Tigre"]
   }
 
-  palabra = ['a','r','g','e','n','t','i','n','a'];
+  palabra = ['R', 'e', 'i', 'n', 'o', ' ', 'U', 'n', 'i', 'd', 'o'];
+  // palabra = ['a','r','g','e','n','t','i','n','a'];
 
   letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m","n",
             "ñ","o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
