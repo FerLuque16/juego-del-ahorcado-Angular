@@ -1,4 +1,4 @@
-<main class="h-screen w-screen pt-9 px-3 pb-2">
+<main class="h-screen w-screen pt-9 px-1 pb-2">
     <div class="header flex justify-evenly items-start">
         <div class="algo flex justify-evenly ">
             <img class="h-11 -ml-3" src="./assets/menu.png" alt="">
@@ -17,23 +17,59 @@
        
     </div>
 
-    <div class="h-5/6 flex flex-col justify-around items-stretch mt-14">
+    <div class="h-5/6 flex flex-col justify-around items-stretch mt-14 pb-10">
+        <!-- Seccion palabra -->
         <div class="h-1/4 flex items-center justify-evenly">
-            @for (item of palabra; track $index) {
+
+            <div class="w-screen flex justify-center">
+                
+                <div class="h-1/2 flex flex-wrap justify-center">
+                    @for (item of palabraAMostrar.split(''); track $index) {
+                        
+                            <button class="text-white text-3xl boton-palabra m-2" [id]="item"
+                            [ngClass]="item == ' '? 'v-hidden' : ''">
+                                @if ($index === 0 && item != ' ') {
+                                    {{item | uppercase}}
+                                }
+                                @else{
+                                    {{item}}
+                                }
+                                
+                                
+                                    
+                            </button>
+                        
+                            
+                            
+                        
+                    } 
+                </div>
+                <!-- <div class="h-1/2">
+                    @for (item of palabra; track $index) {
+                        <button class="text-white text-3xl boton-palabra m-2">
+                            {{item}}
+                        </button>
+                    } 
+                </div> -->
+            </div>
+            <!-- @for (item of palabra; track $index) {
                 <button class="text-white text-3xl boton-palabra m-2">
                     {{item}}
                 </button>
-            }
+            } -->
         </div>
         <!-- Seccion letras -->
         <div class="flex flex-wrap justify-center">
             @for (letra of letras; track $index) {
-                <button class="letra mx-1 my-3 text-3xl">{{letra}}</button>
+                <button class="letra mx-1 my-3 text-3xl" (click)="letraSeleccionada(letra)" 
+                [ngClass]="letrasPresionadas.includes(letra) ? 'letra-deshabilitada' : ''"
+                >{{letra}}
+                </button>
             }
         </div>
 
     </div>
-    <!-- Seccion palabra -->
+    
     
 
     
